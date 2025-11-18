@@ -1,0 +1,50 @@
+.btn {
+  background-color: #9b367b;
+}
+.card {
+  position: relative;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+}
+.card.cheap {
+  background-color: #d17db6;
+}
+.card.affordable {
+  background-color: #bd4296;
+}
+
+.card.expensive {
+  background-color: #792a60;
+}
+
+/* hidden by default */
+.delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  background: rgba(0, 0, 0, 0.3); /* transparent gray */
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 50%;
+
+  opacity: 0; /* hidden */
+  transition: opacity 0.25s ease;
+  pointer-events: none; /* avoid blocking hover */
+}
+
+/* show only on hover */
+.card:hover .delete-btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+.card-image img {
+  width: 100%;
+  height: 400px; /* fixed height */
+  object-fit: cover; /* crops image to fill box without stretching */
+  border-radius: 5px;
+}
