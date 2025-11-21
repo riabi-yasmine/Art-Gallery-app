@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class First {
   user = {
-    name: 'Yasmine',
+    name: 'Suzy',
     age: 23,
     image: 'https://i.pinimg.com/736x/48/17/75/481775197efbbe9ca9bc2c8b6285a2ce.jpg'
   }
@@ -29,11 +29,15 @@ export class First {
 
   students=[
     {
+<<<<<<< HEAD
       name:'Doua',
+=======
+      name:'Sarah',
+>>>>>>> 1f3b96b16e89ababc463f05269215c8dd237e860
       age:17
     },
     {
-      name:'Yasmine',
+      name:'Ali',
       age:20
     },
     {
