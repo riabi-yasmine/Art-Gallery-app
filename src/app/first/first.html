@@ -1,0 +1,48 @@
+<!-- ! data Binding -->
+<div>
+  <h1>{{ user.name }}</h1>
+  <p>{{ user.age }}</p>
+  <img [src]="user.image" alt="" style="width: 100px" /> <br />
+  <br />
+  <input type="text" [(ngModel)]="myname" name="" id="" /> <br /><br />
+  <button (click)="change()">click me to change name</button> <br /><br />
+</div>
+
+<!-- ! @if directives -->
+<div>
+  @if(display){
+  <img [src]="user.image" style="width: 100px" alt="" /> <br /><br />
+  }
+  <button (click)="changeState()">{{ etat }}</button><br /><br />
+</div>
+
+<!-- ! @for and ngClass directive -->
+<!-- todo: with ngClass import CommonModule -->
+<div>
+  @for (item of students; track $index){
+  <div [ngClass]="{ 'bg-danger': item.age < 20, 'bg-success': item.age>=20}">
+    <h3>{{ item.name }}</h3>
+    <p>{{ item.age }}</p>
+  </div>
+  }
+</div>
+
+<!-- ! @for and @if -->
+<div>
+  <p style="color: blueviolet">Age >= 20:</p>
+  @for (item of students; track $index) { @if (item.age>= 20){
+  <h3>{{ item.name }}</h3>
+  <p>{{ item.age }}</p>
+  } } 
+</div>
+
+<!-- ! @switch and ngStyle directive -->
+<div>
+  @switch (bgcolor) { @case ("red") {
+  <p [ngStyle]="{ 'background-color': bgcolor, color: color }">This is red</p>
+  } @case ("green") {
+  <p [ngStyle]="{ 'background-color': bgcolor, color: color }">This is green</p>
+  } }
+  <br />
+  <button (click)="switchColor()">Changer Le couleur</button>
+</div>

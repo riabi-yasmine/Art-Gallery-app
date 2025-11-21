@@ -1,0 +1,36 @@
+   <div class="row mt-5">
+    <h1 class="text-center mt-5" style="color: #571e45;margin-bottom: 5%;">Add To Art Gallery</h1>
+    <div class="col-3">
+      <input
+        [(ngModel)]="art.name"
+        type="text"
+        class="form-control m-1"
+        name=""
+        id=""
+        placeholder="Name..."
+      />
+    </div>
+    <div class="col-3">
+      <input
+        [(ngModel)]="art.price"
+        type="text"
+        class="form-control m-1"
+        name=""
+        id=""
+        placeholder="Price..."
+      />
+    </div>
+    <div class="col-3">
+      <input
+        [(ngModel)]="art.image"
+        type="text"
+        class="form-control m-1"
+        name=""
+        id=""
+        placeholder="Image URL..."
+      />
+    </div>
+    <div class="col-3">
+      <button (click)="add()" class="form-control m-1 btn text-light" name="" id="">Create</button>
+    </div>
+  </div>

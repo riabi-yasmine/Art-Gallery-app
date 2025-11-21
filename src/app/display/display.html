@@ -1,0 +1,30 @@
+<div class="row mt-4">
+  <h1 class="text-center mt-5" style="color: #571e45;margin-bottom: 5%;">Display Art Gallery</h1> <br><br>
+  @for (item of artlist.arts; track $index) {
+  <div class="col-3">
+    <div
+      class="card p-1 m-1"
+      [ngClass]="{
+        cheap: item.price < 30,
+        affordable: item.price >= 30 && item.price < 80,
+        expensive: item.price >= 80
+      }"
+    >
+
+
+      <button class="dismiss" (click)="delete(item)">✕</button>
+
+
+
+      <div class="card-image">
+        <img class="img-fluid" [src]="item.image" alt="No image was added" />
+      </div>
+
+      <div class="card-body">
+        <h3>{{ item.name }}</h3>
+        <p>${{ item.price }}</p>
+      </div>
+    </div>
+  </div>
+  }
+</div>

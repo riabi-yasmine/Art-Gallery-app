@@ -1,0 +1,70 @@
+.card {
+  position: relative;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+}
+.card.cheap {
+  background-color: #d17db6;
+}
+.card.affordable {
+  background-color: #bd4296;
+}
+
+.card.expensive {
+  background-color: #792a60;
+}
+
+
+
+.dismiss {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  padding: 0.;
+  width: 30px;
+  height: 30px;
+
+  background-color: rgba(128, 128, 128, 0.5);
+  border: none;
+  border-radius: 7px;
+
+  font-size: 16px;
+  line-height: 30px; 
+
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, transform 0.15s ease;
+  transform: translateY(0);
+}
+
+
+.card:hover .dismiss {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card:hover .dismiss:hover {
+  background-color: rgba(128, 128, 128, 0.85);
+  transform: translateY(-1px);
+  color: #fff;
+}
+
+.dismiss:hover {
+  background-color: rgba(128, 128, 128, 0.8);
+}
+
+.card-image img {
+  width: 100%;
+  height: 400px; /* fixed height */
+  object-fit: cover; /* crops image to fill box without stretching */
+  border-radius: 5px;
+}
